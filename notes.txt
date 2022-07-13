@@ -1,0 +1,65 @@
+- overview & concepts
+    - USFM
+        - reference to spec
+        - basic syntax
+        - markers
+        - paragraph vs character/note
+        - version of spec handled
+    - multiple hierarchies
+    - "the overlap problem" and overlapping content
+        "above and below", "before and after"
+    - milestones vs containers 
+    - parsers vs processors
+        - this is a parser, not a processor
+        - get_text() vs get_value()
+        - it's your responsibility to follow the whitespace rules.
+    - Elements
+        - both markers and containers
+- synopsis
+    - common examples
+- quickstart
+    - Parsing
+    -   (tokenizing)
+    - Using the parse results
+        - markers, containers, and elements
+        - elements
+            - parser.results
+            - yield
+        - Matchers
+            ElementMatcher usage
+        - searching & processing horizontally (with milestones)
+            - retrieving a milestone
+            - methods
+        - searching & processing vertically (with containers))
+            - methods
+        - .rN /.cN
+    - whitespace
+        - preservation rules
+        - get_text() returning whitespace and why
+            - always preserves significant whitespace
+            - when it normalizes
+            
+        - tips
+            - use .value or get_value() if you don't care about / need whitespace (won't always give a str)
+            - otherwise use .text or get_text and don't strip() - will preserve significant whitespace
+            - don't use .text / get_text() and strip 
+- FAQ
+    - Can i parse arbitary fragments of USFM?
+        - some - sstarting with a character/note marker won't work.
+- performance
+- class docs
+- constructing your own trees
+    - flattening / searching - add, search, add wont find second lot of elements
+- extending the parser
+    - adding Paragraph or Note/Character classes
+        
+- project meta
+    - who
+    - reporting bugs
+    - testing, test suite and coverage
+    - semver
+    - repo
+    - contributing
+    - 
+
+
